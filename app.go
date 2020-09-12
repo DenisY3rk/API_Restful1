@@ -104,7 +104,7 @@ func main() {
 	r.HandleFunc("/movies", createMovieEndPoint).Methods("POST")
 	r.HandleFunc("/movies", updateMovieEndPoint).Methods("UPDATE")
 	r.HandleFunc("/movies/{id}", deleteMovieEndPoint).Methods("DELETE")
-	if err := http.ListenAndServe(":3100", r); err != nil {
+	if err := http.ListenAndServe(":3000", r); err != nil {
 		log.Fatal(err)
 	}
 }
